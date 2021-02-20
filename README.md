@@ -12,6 +12,7 @@ In your project directory, run the following command. This will install all requ
 <br>
 Now, run the following command to start the local server
 <br>
+
 ### `npm start`
 
 This is going to start the server at http://localhost:3000
