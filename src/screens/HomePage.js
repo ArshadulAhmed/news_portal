@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { connect } from "react-redux";
 import { DefaultLoading } from "../components/DefaultLoading";
 import SelectCountry from "../components/SelectCountry";
@@ -7,10 +7,6 @@ import NewsCard from "../components/NewsCard";
 import "../assets/mainLayout.css";
 
 function HomePage(props) {
-    // useEffect(() => {
-    //     props.fetchNews();
-    // }, []);
-
     const newsItemToDisplay =
         props.getAllNews &&
         props.getAllNews.map((item, index) => (
