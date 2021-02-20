@@ -8,12 +8,12 @@ import {
 
 import { baseURL, apiKey } from "../utils/baseURL";
 
-export const fetchNews = () => (dispatch, getState) => {
+export const fetchNews = (country) => (dispatch, getState) => {
     dispatch({
         type: FETCH_NEWS_START,
     });
     axios
-        .get(`${baseURL}/top-headlines?country=us&apiKey=${apiKey}`)
+        .get(`${baseURL}/top-headlines?country=${country}&apiKey=${apiKey}`)
         .then((res) => {
             console.log({ res });
             dispatch({
