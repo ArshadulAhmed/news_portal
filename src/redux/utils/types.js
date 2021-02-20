@@ -8,3 +8,4 @@ export const SEARCH_NEWS_FAIL = "SEARCH_NEWS_FAIL";
 
 export const GET_ERRORS = "GET_ERRORS";
 export const REMOVE_ERROR = "REMOVE_ERROR";
+export const REMOVE_SEARCH_RESULT = "REMOVE_SEARCH_RESULT";

@@ -1,14 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import { DefaultLoading } from "../components/DefaultLoading";
 import SelectCountry from "../components/SelectCountry";
-import { fetchNews } from "../redux/actions/fetchNews";
+import { fetchNews, removeSearchResults } from "../redux/actions/fetchNews";
 import NewsCard from "../components/NewsCard";
 import MessageTost from "../components/MessageTost";
 
 import "../assets/mainLayout.css";
 
 function HomePage(props) {
+    useEffect(() => {
+        props.removeSearchResults();
+    }, []);
+
     const newsItemToDisplay =
         props.getAllNews &&
         props.getAllNews.map((item, index) => (
@@ -40,5 +44,6 @@ function mapStateToProps(state) {
 
 const mapDispatchToProps = {
     fetchNews,
+    removeSearchResults,
 };
 export default connect(mapStateToProps, mapDispatchToProps)(HomePage);

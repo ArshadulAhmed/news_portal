@@ -3,6 +3,7 @@ import {
     FETCH_NEWS_START,
     FETCH_NEWS_SUCCESS,
     FETCH_NEWS_FAIL,
+    REMOVE_SEARCH_RESULT,
 } from "../utils/types";
 import { returnErrors } from "../utils/messages";
 import { baseURL, apiKey } from "../utils/baseURL";
@@ -25,4 +26,10 @@ export const fetchNews = (country) => (dispatch) => {
                 type: FETCH_NEWS_FAIL,
             });
         });
+};
+
+export const removeSearchResults = () => (dispatch) => {
+    dispatch({
+        type: REMOVE_SEARCH_RESULT,
+    });
 };

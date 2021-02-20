@@ -48,11 +48,12 @@ function SearchPage(props) {
 
                 {props.totalResult === 0 && !props.isLoading ? (
                     <p className="searchPage">No result found</p>
-                ) : !props.isLoading && props.totalResult !== 1 ? (
+                ) : props.totalResult >= 1 ? null : props.isLoading ? null : (
                     <p className="searchPage">
                         Enter search keyword and hit submit
                     </p>
-                ) : null}
+                )}
+
                 {props.getErrorInfo ? <MessageTost /> : null}
             </div>
         </React.Fragment>
@@ -62,8 +63,11 @@ function SearchPage(props) {
 function mapStateToProps(state) {
     return {
         isLoading: state.searchResult.isLoading,
-        totalResult: state.searchResult && state.searchResult.totalResults,
-        getAllNews: state.searchResult && state.searchResult.articles,
+        totalResult:
+            state.searchResult.results &&
+            state.searchResult.results.totalResults,
+        getAllNews:
+            state.searchResult.results && state.searchResult.results.articles,
 
         getErrorInfo:
             state.errors && state.errors.msg && state.errors.msg.message,
