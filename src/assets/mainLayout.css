@@ -2,18 +2,23 @@
 body {
     font-family: "Poppins", sans-serif;
 }
-
+body {
+    margin: 0px;
+}
 .header_main {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    background: #f2f2f2;
+    background: #3b5998;
     padding: 1rem;
 }
 
 .header_main a {
     text-decoration: none;
-    color: #000;
+    color: #fff;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    margin-left: 2rem;
 }
 .news_card_container {
     display: flex;
@@ -102,7 +107,7 @@ p.news_description {
 }
 
 .search_form input {
-    border: 1px solid #ccc;
+    border: 2px solid #3b5998;
     min-height: 45px;
     min-width: 300px;
     border-radius: 14px 0px 0px 14px;
@@ -110,12 +115,17 @@ p.news_description {
 }
 
 .search_form button {
-    min-height: 50px;
+    min-height: 51px;
     border-left: none;
     border-radius: 0px 14px 14px 0px;
-    border: 1px solid #ccc;
+    border: 1px solid #3b5998;
     outline: none;
     cursor: pointer;
+    background: #3b5998;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 0px 1rem;
 }
 
 .search_form button:active,
@@ -133,4 +143,36 @@ p.error {
     color: red;
     font-weight: 600;
     letter-spacing: 1px;
+}
+.searchPage {
+    font-weight: 600;
+    color: #000;
+    letter-spacing: 1px;
+}
+.MessageTost_main {
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    max-width: 50%;
+    border: 1px solid #e43c3c;
+    padding: 0.5rem 1rem;
+    background: #e43c3c;
+    border-radius: 14px;
+}
+
+.errorTost p {
+    color: red;
+    font-size: 0.8rem;
+    margin: 0px;
+    color: #fff;
+}
+p.close {
+    display: inline-block;
+    background: #fff;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    color: red;
+    text-align: center;
+    cursor: pointer;
 }

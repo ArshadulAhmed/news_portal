@@ -1,11 +1,9 @@
 import React from "react";
 import moment from "moment";
 
-import { Link } from "react-router-dom";
-
 export function NewsCard(props) {
     const { items } = props;
-    console.log(items);
+
     return (
         <div className="news_card_main">
             <div className="news_image">

@@ -4,6 +4,8 @@ import { DefaultLoading } from "../components/DefaultLoading";
 import SelectCountry from "../components/SelectCountry";
 import { fetchNews } from "../redux/actions/fetchNews";
 import NewsCard from "../components/NewsCard";
+import MessageTost from "../components/MessageTost";
+
 import "../assets/mainLayout.css";
 
 function HomePage(props) {
@@ -22,6 +24,7 @@ function HomePage(props) {
             <div className="news_card_container">
                 {props.isLoading ? <DefaultLoading /> : newsItemToDisplay}
             </div>
+            {props.getErrorInfo ? <MessageTost /> : null}
         </React.Fragment>
     );
 }
@@ -30,6 +33,8 @@ function mapStateToProps(state) {
     return {
         isLoading: state.allNews.isLoading,
         getAllNews: state.allNews && state.allNews.articles,
+        getErrorInfo:
+            state.errors && state.errors.msg && state.errors.msg.message,
     };
 }
 
