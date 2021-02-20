@@ -1,0 +1,16 @@
+.mainLayout {
+  height: 100vh;
+  height: auto;
+}
+
+.paginationCustom {
+  display: flex;
+  justify-content: center;
+}
+.paginationCustom button {
+  margin: 10px;
+  padding: 5px 20px;
+  background-color: #fafafa !important;
+  cursor: pointer;
+  border: none;
+}
