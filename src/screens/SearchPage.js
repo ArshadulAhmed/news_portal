@@ -37,6 +37,7 @@ function SearchPage(props) {
                         type="text"
                         placeholder="Enter Search Keyword here..."
                         name="search"
+                        autoFocus
                     />
                     <button type="submit">Search</button>
                     {error ? <p className="error">{error}</p> : null}

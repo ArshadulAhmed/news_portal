@@ -35,6 +35,7 @@ body {
     border-radius: 4px;
     padding: 0.5rem;
     transition: all 0.3s;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 .news_card_main:hover {
     background-color: #f2f2f2;
@@ -60,12 +61,14 @@ p.news_content {
 p.news_description {
     font-size: 0.8rem;
 }
-
+.readMore {
+    text-align: right;
+}
 .news_description a {
     color: #0390ff;
     text-decoration: none;
     font-weight: 600;
-    font-size: 0.5rem;
+    font-size: 0.7rem;
     letter-spacing: 1px;
 }
 .news_published {
@@ -77,22 +80,27 @@ p.news_description {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 1rem;
+    padding: 2rem 0rem 1.5rem;
 }
 
 .home_top p {
     margin: 0px;
     font-size: 1.2rem;
+    color: #3b5998;
 }
 
 .home_top select {
-    border: 1px solid #f2f2f2;
+    border: 2px solid #3b5998;
     border-radius: 8px;
     overflow: hidden;
     width: 146px;
     text-align: center;
     margin-left: 1rem;
     cursor: pointer;
+    text-align: center;
+    color: #3b5998;
+    font-size: 1rem;
+    color: #3b5998;
 }
 .home_top select:active,
 .home_top select:hover,
@@ -148,6 +156,7 @@ p.error {
     font-weight: 600;
     color: #000;
     letter-spacing: 1px;
+    text-align: center;
 }
 .MessageTost_main {
     position: absolute;
@@ -158,6 +167,8 @@ p.error {
     padding: 0.5rem 1rem;
     background: #e43c3c;
     border-radius: 14px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 .errorTost p {
@@ -175,4 +186,20 @@ p.close {
     color: red;
     text-align: center;
     cursor: pointer;
+}
+.loadingText {
+    font-weight: 600;
+    color: #3b5998;
+    letter-spacing: 2px;
+}
+@media (min-width: 0px) and (max-width: 479px) {
+    .search_form input {
+        min-width: 60%;
+    }
+    .searchPage {
+        font-size: 0.7rem;
+    }
+    .home_top p {
+        font-size: 1rem;
+    }
 }

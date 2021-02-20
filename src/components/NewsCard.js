@@ -4,6 +4,11 @@ import moment from "moment";
 export function NewsCard(props) {
     const { items } = props;
 
+    // If no author detail/content details found retun null
+    if (!items.author || !items.content) {
+        return null;
+    }
+
     return (
         <div className="news_card_main">
             <div className="news_image">
@@ -32,9 +37,15 @@ export function NewsCard(props) {
                     {moment(items.publishedAt).format("MM-DD-YYYY")}
                 </p>
 
-                <a href={items.url} target="_blank" rel="noopener noreferrer">
-                    Read more...
-                </a>
+                <p className="readMore">
+                    <a
+                        href={items.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Read more...
+                    </a>
+                </p>
             </div>
         </div>
     );
