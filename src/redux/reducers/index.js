@@ -1,3 +1,6 @@
 import { combineReducers } from "redux";
+import allNews from "./allNews";
 
-export default combineReducers({});
+export default combineReducers({
+    allNews,
+});

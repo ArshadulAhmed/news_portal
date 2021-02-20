@@ -1,16 +1,12 @@
-.mainLayout {
-  height: 100vh;
-  height: auto;
+.header_main {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background: #f2f2f2;
+    padding: 1rem;
 }
 
-.paginationCustom {
-  display: flex;
-  justify-content: center;
-}
-.paginationCustom button {
-  margin: 10px;
-  padding: 5px 20px;
-  background-color: #fafafa !important;
-  cursor: pointer;
-  border: none;
+.header_main a {
+    text-decoration: none;
+    color: #000;
 }
